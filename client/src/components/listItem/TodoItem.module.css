@@ -1,0 +1,50 @@
+.todoItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.completed {
+  color: #6c757d;
+  text-decoration: line-through;
+}
+
+.blockButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .buttonComplete {
+    background-color: #198b58;
+
+    &:hover {
+      color: #198b58;
+    }
+  }
+
+  .buttonDelete {
+    background-color: #df3a3a;
+
+    &:hover {
+      color: #df3a3a;
+    }
+  }
+
+  :is(.buttonComplete, .buttonDelete) {
+    border: 0;
+    color: #fff;
+    border-radius: 5px;
+    padding-block: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
