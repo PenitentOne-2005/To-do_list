@@ -1,8 +1,9 @@
 import { useEffect, type FC } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import type { AppDispatch } from "./store";
-import { fetchTodos, createTodo, selectTodoState } from "./slice";
+import { fetchTodos, createTodo } from "./slice";
 import { Form, TodoList } from "./components";
+import { selectTodoState } from "./selectors";
 
 const App: FC = () => {
   const dispatch = useDispatch<AppDispatch>();
